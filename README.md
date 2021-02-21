@@ -20,11 +20,13 @@
 -El programa consiste en un punto de venta realizado en lenguaje C# , manejando la base de datos en SQL generando atributos para cada producto y cada usuario(ADMINISTRADOS Y CAJERO) asi mismo usamos plataformas adicionales para el mockup como el NinjaMock para el prototipo de diseño para un mejor ambiente y entendimiento
 
 #### Autores:✒️
--**Cristian Guevara Ferro **
--**Elvis Jorge Huaman Mendoza **
--**Johan Wilfredo Huaman Mendoza **
--**Alexander Javier Huaman Guevara **
--**Benjamin Alexander Hualverde Quispe -**
+
+- **Cristian Guevara Ferro** - _GitHub Account_ - [-](https://github.com/-)
+- **Elvis Jorge Huaman Mendoza** - _GitHub Account_ - [-](https://github.com/-)
+- **Johan Wilfredo Huaman Mendoza** - _GitHub Account_ - [-](https://github.com/-)
+- **Alexander Javier Huaman Guevara** - _GitHub Account_ - [-](https://github.com/-)
+- **Benjamin Alexander Hualverde Quispe** - _GitHub Account_ - [-](https://github.com/-)
+
 
 
 ---
