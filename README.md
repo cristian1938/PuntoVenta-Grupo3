@@ -21,7 +21,7 @@
 
 #### Autores:✒️
 
-- **Cristian Guevara Ferro** - _GitHub Account_ - [-](https://github.com/cristian1938)
+- **Cristian Guevara Ferro** - _GitHub Account_ - [Cristian1938](https://github.com/cristian1938)
 - **Elvis Jorge Huaman Mendoza** - _GitHub Account_ - [-](https://github.com/-)
 - **Johan Wilfredo Huaman Mendoza** - _GitHub Account_ - [jhno-code](https://github.com/jhno-code)
 - **Alexander Javier Huaman Guevara** - _GitHub Account_ - [-](https://github.com/-)
