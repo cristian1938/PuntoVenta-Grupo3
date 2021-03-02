@@ -1,6 +1,6 @@
-# **<center> 💻 PUNTO DE VENTA 🛒 </center>**
+# **<center> 💻 PUNTO DE VENTA UNSAAC 🛒 </center>**
 
-## Punto de venta de un supermercado
+## Punto de venta de un supermercado grupo 3
 
 ### Datos Academicos 📖
 
@@ -10,8 +10,7 @@
 
 #### Docente:
 
-- **Waldo Elio Ibarra Zambrano - Docente - Cliente.** - _Docente
-
+- **Waldo Elio Ibarra Zambrano - Docente - Cliente.** 
 #### Trabajo:
 
 - Realizar un punto de venta basandonos en las metodologias del software
