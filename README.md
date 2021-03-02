@@ -13,7 +13,7 @@
 - **Waldo Elio Ibarra Zambrano - Docente - Cliente.** 
 #### Trabajo:
 
-- Realizar un punto de venta basandonos en las metodologias del software
+- Realizar un punto de venta basandonos en las metodologias del software SCRUM
 
 ## Descripcion
 -El programa consiste en un punto de venta realizado en lenguaje C# , manejando la base de datos en SQL generando atributos para cada producto y cada usuario(ADMINISTRADOS Y CAJERO) asi mismo usamos plataformas adicionales para el mockup como el NinjaMock para el prototipo de diseño para un mejor ambiente y entendimiento
