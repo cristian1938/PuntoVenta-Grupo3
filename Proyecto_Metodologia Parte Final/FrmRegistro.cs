@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Configuration;
 
 namespace Proyecto_Metodologia
 {
@@ -40,8 +39,9 @@ namespace Proyecto_Metodologia
         {
             try
             {
-                string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
-                using (SqlConnection conexion = new SqlConnection(cnn))
+
+                using (SqlConnection conexion = new SqlConnection("Data Source=localhost;" +
+                "Initial Catalog=BDSISTEMA_VENTAS;Integrated Security=SSPI;"))
                 {
                 string opcion = "";
                     if (radioCajero.Checked)

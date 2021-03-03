@@ -105,9 +105,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(183, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -180,7 +180,6 @@
             this.btnarqueo.Text = "ARQUEO";
             this.btnarqueo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnarqueo.UseVisualStyleBackColor = false;
-            this.btnarqueo.Click += new System.EventHandler(this.btnarqueo_Click);
             // 
             // btnventas
             // 
