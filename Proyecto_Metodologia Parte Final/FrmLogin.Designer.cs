@@ -1,5 +1,4 @@
-﻿
-namespace Proyecto_Metodologia
+﻿namespace Proyecto_Metodologia
 {
     partial class FrmLogin
     {
@@ -29,7 +28,6 @@ namespace Proyecto_Metodologia
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.buttonIngresar = new System.Windows.Forms.Button();
@@ -37,12 +35,11 @@ namespace Proyecto_Metodologia
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.labelContraseña = new System.Windows.Forms.Label();
-            this.buttonRegistrarse = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +67,7 @@ namespace Proyecto_Metodologia
             this.buttonIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonIngresar.Font = new System.Drawing.Font("Palatino Linotype", 14.16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIngresar.ForeColor = System.Drawing.Color.Black;
-            this.buttonIngresar.Location = new System.Drawing.Point(411, 245);
+            this.buttonIngresar.Location = new System.Drawing.Point(296, 254);
             this.buttonIngresar.Name = "buttonIngresar";
             this.buttonIngresar.Size = new System.Drawing.Size(172, 47);
             this.buttonIngresar.TabIndex = 2;
@@ -81,7 +78,7 @@ namespace Proyecto_Metodologia
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImage = global::Proyecto_Metodologia.Properties.Resources.unsaac;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Location = new System.Drawing.Point(22, 40);
@@ -93,7 +90,7 @@ namespace Proyecto_Metodologia
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImage = global::Proyecto_Metodologia.Properties.Resources.informaticas;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Location = new System.Drawing.Point(628, 40);
             this.panel2.Name = "panel2";
@@ -124,29 +121,13 @@ namespace Proyecto_Metodologia
             this.labelContraseña.TabIndex = 6;
             this.labelContraseña.Text = "Contraseña:";
             // 
-            // buttonRegistrarse
-            // 
-            this.buttonRegistrarse.BackColor = System.Drawing.Color.Azure;
-            this.buttonRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRegistrarse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.buttonRegistrarse.FlatAppearance.BorderSize = 3;
-            this.buttonRegistrarse.Font = new System.Drawing.Font("Palatino Linotype", 14.16F, System.Drawing.FontStyle.Bold);
-            this.buttonRegistrarse.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonRegistrarse.Location = new System.Drawing.Point(204, 247);
-            this.buttonRegistrarse.Name = "buttonRegistrarse";
-            this.buttonRegistrarse.Size = new System.Drawing.Size(142, 45);
-            this.buttonRegistrarse.TabIndex = 7;
-            this.buttonRegistrarse.Text = "Registrarse";
-            this.buttonRegistrarse.UseVisualStyleBackColor = false;
-            this.buttonRegistrarse.Click += new System.EventHandler(this.buttonRegistrarse_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(249, 9);
+            this.label1.Location = new System.Drawing.Point(220, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(323, 32);
             this.label1.TabIndex = 8;
@@ -167,13 +148,23 @@ namespace Proyecto_Metodologia
             this.panel3.TabIndex = 9;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(143, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Olvidaste tu Contraseña?";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(168, 46);
+            this.label2.Location = new System.Drawing.Point(343, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 32);
             this.label2.TabIndex = 10;
@@ -196,17 +187,7 @@ namespace Proyecto_Metodologia
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(143, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Olvidaste tu Contraseña?";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // Form1
+            // FrmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
@@ -217,13 +198,12 @@ namespace Proyecto_Metodologia
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonRegistrarse);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonIngresar);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FrmLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel3.ResumeLayout(false);
@@ -242,7 +222,6 @@ namespace Proyecto_Metodologia
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.Label labelContraseña;
-        private System.Windows.Forms.Button buttonRegistrarse;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
@@ -250,4 +229,3 @@ namespace Proyecto_Metodologia
         private System.Windows.Forms.Label label4;
     }
 }
-

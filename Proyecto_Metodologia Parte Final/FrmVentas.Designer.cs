@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.fechaventa = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,11 +53,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtsubtotal = new System.Windows.Forms.TextBox();
-            this.txtigv = new System.Windows.Forms.TextBox();
-            this.txttotal = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtCodVentas = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -144,13 +144,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "VENTAS";
             // 
-            // fechaventa
+            // dateTimePicker1
             // 
-            this.fechaventa.CustomFormat = "yy/MM/dd";
-            this.fechaventa.Location = new System.Drawing.Point(535, 170);
-            this.fechaventa.Name = "fechaventa";
-            this.fechaventa.Size = new System.Drawing.Size(200, 20);
-            this.fechaventa.TabIndex = 4;
+            this.dateTimePicker1.Location = new System.Drawing.Point(535, 170);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // label3
             // 
@@ -221,7 +220,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "REGISTRAR VENTA";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -231,7 +229,6 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Eliminar Producto";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -305,27 +302,26 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "SUBTOTAL :";
             // 
-            // txtsubtotal
+            // textBox5
             // 
-            this.txtsubtotal.Location = new System.Drawing.Point(164, 391);
-            this.txtsubtotal.Name = "txtsubtotal";
-            this.txtsubtotal.Size = new System.Drawing.Size(100, 20);
-            this.txtsubtotal.TabIndex = 19;
-            this.txtsubtotal.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBox5.Location = new System.Drawing.Point(164, 391);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 19;
             // 
-            // txtigv
+            // textBox6
             // 
-            this.txtigv.Location = new System.Drawing.Point(354, 391);
-            this.txtigv.Name = "txtigv";
-            this.txtigv.Size = new System.Drawing.Size(100, 20);
-            this.txtigv.TabIndex = 20;
+            this.textBox6.Location = new System.Drawing.Point(354, 391);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 20;
             // 
-            // txttotal
+            // textBox7
             // 
-            this.txttotal.Location = new System.Drawing.Point(612, 391);
-            this.txttotal.Name = "txttotal";
-            this.txttotal.Size = new System.Drawing.Size(100, 20);
-            this.txttotal.TabIndex = 21;
+            this.textBox7.Location = new System.Drawing.Point(612, 391);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 21;
             // 
             // label10
             // 
@@ -337,12 +333,12 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "NUMERO DE VENTA: ";
             // 
-            // txtCodVentas
+            // textBox8
             // 
-            this.txtCodVentas.Location = new System.Drawing.Point(368, 62);
-            this.txtCodVentas.Name = "txtCodVentas";
-            this.txtCodVentas.Size = new System.Drawing.Size(124, 20);
-            this.txtCodVentas.TabIndex = 23;
+            this.textBox8.Location = new System.Drawing.Point(368, 62);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 23;
             // 
             // iconButton1
             // 
@@ -364,11 +360,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(798, 483);
             this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.txtCodVentas);
+            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txttotal);
-            this.Controls.Add(this.txtigv);
-            this.Controls.Add(this.txtsubtotal);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -383,7 +379,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.fechaventa);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtcodp);
@@ -411,7 +407,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker fechaventa;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -427,11 +423,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtsubtotal;
-        private System.Windows.Forms.TextBox txtigv;
-        private System.Windows.Forms.TextBox txttotal;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtCodVentas;
+        private System.Windows.Forms.TextBox textBox8;
         private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

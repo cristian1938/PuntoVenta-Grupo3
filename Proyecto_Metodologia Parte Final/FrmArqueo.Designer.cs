@@ -32,6 +32,7 @@
             this.USUSARIO = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelcontenido = new System.Windows.Forms.Panel();
+            this.txttotal = new System.Windows.Forms.TextBox();
             this.lbDiferencia = new System.Windows.Forms.Label();
             this.lbTituloDiferencia = new System.Windows.Forms.Label();
             this.btnConteo = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.dateTimeArqueo = new System.Windows.Forms.DateTimePicker();
             this.lbTituloVentas = new System.Windows.Forms.Label();
             this.dgventas = new System.Windows.Forms.DataGridView();
-            this.txttotal = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelcontenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgventas)).BeginInit();
@@ -104,6 +104,16 @@
             this.panelcontenido.Name = "panelcontenido";
             this.panelcontenido.Size = new System.Drawing.Size(782, 477);
             this.panelcontenido.TabIndex = 2;
+            // 
+            // txttotal
+            // 
+            this.txttotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txttotal.Enabled = false;
+            this.txttotal.Location = new System.Drawing.Point(361, 354);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(87, 13);
+            this.txttotal.TabIndex = 14;
+            this.txttotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             // 
             // lbDiferencia
             // 
@@ -226,15 +236,6 @@
             this.dgventas.ReadOnly = true;
             this.dgventas.Size = new System.Drawing.Size(519, 202);
             this.dgventas.TabIndex = 0;
-            // 
-            // txttotal
-            // 
-            this.txttotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txttotal.Enabled = false;
-            this.txttotal.Location = new System.Drawing.Point(361, 354);
-            this.txttotal.Name = "txttotal";
-            this.txttotal.Size = new System.Drawing.Size(87, 13);
-            this.txttotal.TabIndex = 14;
             // 
             // FrmArqueo
             // 
