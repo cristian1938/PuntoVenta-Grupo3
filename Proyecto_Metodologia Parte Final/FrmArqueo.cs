@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
+using System.Configuration;
 
 namespace Proyecto_Metodologia
 {
@@ -37,12 +37,11 @@ namespace Proyecto_Metodologia
         public DataSet EjecutarSelect(string pConsulta)
         {//-- Método para ejecutar consultas del tipo SELECT
 
-            using (SqlConnection conexion = new SqlConnection("Data Source=localhost;" +
-               "Initial Catalog=BDSISTEMA_VENTAS;Integrated Security=SSPI;"))
+            string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
+            using (SqlConnection conexion = new SqlConnection(cnn))
             {
                 conexion.Open();
                 SqlDataAdapter a = new SqlDataAdapter();
-                using (SqlCommand cmd = new SqlCommand(pConsulta, conexion)) ;
                 a.SelectCommand = new SqlCommand(pConsulta, conexion);
                 aDatos = new DataSet();
                 // aAdaptador.Fill(aDatos);
@@ -58,13 +57,13 @@ namespace Proyecto_Metodologia
                 return Datos.Tables[0].Rows[0][pNombreCampo].ToString();
             }
             else
-                return "";
+            return "";
         }
         private void dateTimeArqueo_ValueChanged(object sender, EventArgs e)
         {
-           dgventas.DataSource= validarfecha();
-            dgventas.Columns["CodVenta"].Width = 150;
-            dgventas.Columns["CodVenta"].HeaderText = "Codigo de Venta";
+            dgventas.DataSource= validarfecha();
+            dgventas.Columns["CodigoVenta"].Width = 150;
+            dgventas.Columns["CodigoVenta"].HeaderText = "Codigo de Venta";
             dgventas.Columns["PrecioTotal"].Width = 160;
             dgventas.Columns["Fecha"].Width = 180;
             total();
@@ -92,10 +91,18 @@ namespace Proyecto_Metodologia
 
         private void txtconteo_TextChanged(object sender, EventArgs e)
         {
-            if(txttotal.Text!="" && txtconteo.Text != "")
-            {
-                lbDiferencia.Text = (double.Parse(txttotal.Text) - double.Parse(txtconteo.Text)).ToString();
-            }
+            actualizarDiferencia();
+        }
+
+        private void txttotal_TextChanged(object sender, EventArgs e)
+        {
+            actualizarDiferencia();
+        }
+        private void actualizarDiferencia()
+        {
+            double totV = txttotal.Text != "" ? double.Parse(txttotal.Text) : 0;
+            double totC = txtconteo.Text != "" ? double.Parse(txtconteo.Text) : 0;
+            lbDiferencia.Text = (Math.Round(totV - totC,2)).ToString();
         }
     }
 }

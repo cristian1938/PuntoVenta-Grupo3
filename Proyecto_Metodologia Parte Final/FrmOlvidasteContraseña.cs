@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Proyecto_Metodologia
 {
@@ -22,12 +23,11 @@ namespace Proyecto_Metodologia
         {
             try
             {
-
-                using (SqlConnection conexion = new SqlConnection("Data Source=localhost;" +
-                "Initial Catalog=BDSISTEMA_VENTAS;Integrated Security=SSPI;"))
+                string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
+                using (SqlConnection conexion = new SqlConnection(cnn))
                 {
                     conexion.Open();
-                    using (SqlCommand cmd = new SqlCommand("SELECT * from TUsuarios  WHERE TUsuarios.Correo='" + txtCorreo.Text +  "'", conexion))
+                    using (SqlCommand cmd = new SqlCommand("SELECT * from TUsuarios  WHERE TUsuarios.Correo='" + txtCorreo.Text + "'", conexion))
                     {
                         SqlDataReader dr = cmd.ExecuteReader();
                         if (dr.Read())
