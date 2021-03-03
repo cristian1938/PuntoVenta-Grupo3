@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Proyecto_Metodologia
@@ -29,11 +29,13 @@ namespace Proyecto_Metodologia
         }
         public DataSet EjecutarSelect(string pConsulta)
         {//-- Método para ejecutar consultas del tipo SELECT
-            string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
-            using (SqlConnection conexion = new SqlConnection(cnn))
+
+            using (SqlConnection conexion = new SqlConnection("Data Source=localhost;" +
+               "Initial Catalog=BDSISTEMA_VENTAS;Integrated Security=SSPI;"))
             {
                 conexion.Open();
                 SqlDataAdapter a = new SqlDataAdapter();
+                using (SqlCommand cmd = new SqlCommand(pConsulta, conexion)) ;
                 a.SelectCommand = new SqlCommand(pConsulta, conexion);
                 aDatos = new DataSet();
                 // aAdaptador.Fill(aDatos);
@@ -53,7 +55,7 @@ namespace Proyecto_Metodologia
         }
         public DataTable buscarproductos(string Pdescripcion)
         {
-            string Consulta = "select * from TProductos where Descripcion like '" + Pdescripcion + "%'";
+            string Consulta = "select * from TAlmacenProductos where Descripcion like '" + Pdescripcion + "%'";
            
           EjecutarSelect(Consulta);
             return Datos.Tables[0];
@@ -70,7 +72,7 @@ namespace Proyecto_Metodologia
         public string[] obtenerDatos(string pCodigo)
         {
             string[] datos= new string[5];
-            string Consulta = "select * from TProductos where CodigoProducto= '" + pCodigo + "'";
+            string Consulta = "select * from TAlmacenProductos where CodigoProducto= '" + pCodigo + "'";
             EjecutarSelect(Consulta);
             datos[0] = ValorAtributo("CodigoProducto");
             datos[1] = ValorAtributo("Descripcion");

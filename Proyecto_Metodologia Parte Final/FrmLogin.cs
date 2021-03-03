@@ -28,7 +28,7 @@ namespace Proyecto_Metodologia
         public FrmLogin()
         {
             InitializeComponent();
-
+           
             IniciarEntidad(new cUsuario());
         }
 
@@ -36,8 +36,9 @@ namespace Proyecto_Metodologia
         {
             try
             {
-                string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
-                using (SqlConnection conexion = new SqlConnection(cnn))
+               
+                using (SqlConnection conexion = new SqlConnection("Data Source=localhost;" +
+                "Initial Catalog=BDSISTEMA_VENTAS;Integrated Security=SSPI;"))
                 {
                     conexion.Open();
                     using (SqlCommand cmd = new SqlCommand("SELECT * from TUsuarios  WHERE TUsuarios.Usuario='" + txtusuario.Text + "' AND TUsuarios.Contraseña='" + txtcontraseña.Text + "'", conexion))
@@ -72,6 +73,13 @@ namespace Proyecto_Metodologia
         private void button1_Click(object sender, EventArgs e)
         {
             logins();
+        }
+
+        private void buttonRegistrarse_Click(object sender, EventArgs e)
+        {
+            Form a = new FrmRegistro();
+            a.ShowDialog();
+           
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
