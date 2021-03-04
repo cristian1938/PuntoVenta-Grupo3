@@ -82,7 +82,7 @@ namespace Proyecto_Metodologia
         }
         public void actualizarstock(int cantidad, string codproducto)
         {
-            string Consulta = "update TProductos set Cantidad =" + cantidad + " where CodigoProducto='" + codproducto + "'";
+            string Consulta = "update TProductos set Stock =" + cantidad + " where CodigoProducto='" + codproducto + "'";
 
             EjecutarSelect(Consulta);
         }
