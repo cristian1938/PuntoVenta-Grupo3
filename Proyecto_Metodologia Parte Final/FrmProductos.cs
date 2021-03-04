@@ -21,7 +21,7 @@ namespace Proyecto_Metodologia
         public FrmProductos()
         {
             InitializeComponent();
-            
+
         }
         public DataSet Datos
         {
@@ -34,6 +34,7 @@ namespace Proyecto_Metodologia
             {
                 conexion.Open();
                 SqlDataAdapter a = new SqlDataAdapter();
+                using (SqlCommand cmd = new SqlCommand(pConsulta, conexion)) ;
                 a.SelectCommand = new SqlCommand(pConsulta, conexion);
                 aDatos = new DataSet();
                 // aAdaptador.Fill(aDatos);
@@ -54,30 +55,30 @@ namespace Proyecto_Metodologia
         public DataTable buscarproductos(string Pdescripcion)
         {
             string Consulta = "select * from TProductos where Descripcion like '" + Pdescripcion + "%'";
-           
-          EjecutarSelect(Consulta);
+
+            EjecutarSelect(Consulta);
             return Datos.Tables[0];
         }
 
 
         private void txtproductos_TextChanged(object sender, EventArgs e)
         {
-           dgvproductos.DataSource= buscarproductos(txtproductos.Text);
+            dgvproductos.DataSource = buscarproductos(txtproductos.Text);
             dgvproductos.Columns["Unidad"].Visible = false;
             dgvproductos.Columns["PrecioUnitario"].Visible = false;
             dgvproductos.Columns["Descripcion"].Width = 230;
         }
         public string[] obtenerDatos(string pCodigo)
         {
-            string[] datos= new string[5];
+            string[] datos = new string[5];
             string Consulta = "select * from TProductos where CodigoProducto= '" + pCodigo + "'";
             EjecutarSelect(Consulta);
             datos[0] = ValorAtributo("CodigoProducto");
             datos[1] = ValorAtributo("Descripcion");
-           datos[2] = ValorAtributo("PrecioUnitario");
-           datos[3] = ValorAtributo("Cantidad");
-            
-           
+            datos[2] = ValorAtributo("PrecioUnitario");
+            datos[3] = ValorAtributo("Stock");
+
+
             DatosT = datos;
             return datos;
         }
@@ -98,12 +99,17 @@ namespace Proyecto_Metodologia
             }
             else
             {
-                MessageBox.Show("No ha seleccionado ningún alumno", "ALERTA");
+                MessageBox.Show("No ha seleccionado ningún producto", "ALERTA");
             }
         }
         public string[] obtenerdatos()
         {
             return DatosT;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

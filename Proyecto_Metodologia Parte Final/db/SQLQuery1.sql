@@ -49,10 +49,10 @@ if exists (select * from sysobjects where name = 'TVentas')
 go
 create table TVentas
 ( 
-	CodigoVenta varchar(4) not null,
+	CodigoVenta varchar(6) not null,
 	PrecioTotal float not null,
 	Fecha date not null,
-	Usuario varchar(30) not null,
+	Usuario varchar(30),
 	primary key(CodigoVenta),
 	foreign key(Usuario) references TUsuarios,
 )
@@ -63,7 +63,7 @@ if exists (select * from sysobjects where name = 'TProductosVendidos')
 go
 create table TProductosVendidos
 ( 
-	CodigoVenta varchar(4) not null,
+	CodigoVenta varchar(6) not null,
 	CodigoProducto varchar(4) not null,
 	Cantidad int not null,
 	primary key(CodigoVenta, CodigoProducto),
@@ -135,10 +135,5 @@ insert into TProductos values('A050','Leche evaporada entera Gloria','Tarro',100
 --Mostramos la tabla TAlmacenProductos
 --select* from TProductos
 
-
-insert into TVentas values('V001',120,'2021/03/03','182914')
-insert into TVentas values('V002',8.90,'2021/03/03','182914')
-insert into TProductosVendidos values('V002','A049',2)
-insert into TProductosVendidos values('V002','A050',1)
 --select * from TVentas
 --select * from TProductosVendidos
