@@ -75,7 +75,7 @@ namespace Proyecto_Metodologia
             datos[0] = ValorAtributo("CodigoProducto");
             datos[1] = ValorAtributo("Descripcion");
            datos[2] = ValorAtributo("PrecioUnitario");
-           datos[3] = ValorAtributo("Cantidad");
+           datos[3] = ValorAtributo("Stock");
             
            
             DatosT = datos;
