@@ -61,3 +61,4 @@ C:\Users\jhno\Desktop\Code\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\jhno\Desktop\Code\obj\Debug\Proyecto_Metodologia.csproj.CopyComplete
 C:\Users\jhno\Desktop\Code\obj\Debug\Proyecto_Metodologia.FrmLogin.resources
 C:\Users\jhno\Desktop\Code\obj\Debug\Proyecto_Metodologia.FrmOlvidasteContraseña.resources
+C:\Users\jhno\Desktop\Code\obj\Debug\Proyecto_Metodologia.FrmListarUsuarios.resources

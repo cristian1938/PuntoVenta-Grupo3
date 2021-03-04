@@ -79,7 +79,6 @@ namespace Proyecto_Metodologia
             if (txtcategoria.Text == "Cajero")
             {
                 btnusuarios.Enabled = false;
-                btnarqueo.Enabled = false;
             }
         }
         private void AbrirFormularioHijo(Form FrmHijo)
