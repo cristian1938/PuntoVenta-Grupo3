@@ -1,4 +1,5 @@
-﻿namespace Proyecto_Metodologia
+﻿
+namespace Proyecto_Metodologia
 {
     partial class FrmLogin
     {
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.buttonIngresar = new System.Windows.Forms.Button();
@@ -67,7 +69,7 @@
             this.buttonIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonIngresar.Font = new System.Drawing.Font("Palatino Linotype", 14.16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIngresar.ForeColor = System.Drawing.Color.Black;
-            this.buttonIngresar.Location = new System.Drawing.Point(296, 254);
+            this.buttonIngresar.Location = new System.Drawing.Point(411, 245);
             this.buttonIngresar.Name = "buttonIngresar";
             this.buttonIngresar.Size = new System.Drawing.Size(172, 47);
             this.buttonIngresar.TabIndex = 2;
@@ -78,7 +80,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::Proyecto_Metodologia.Properties.Resources.unsaac;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Location = new System.Drawing.Point(22, 40);
@@ -90,7 +92,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = global::Proyecto_Metodologia.Properties.Resources.informaticas;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Location = new System.Drawing.Point(628, 40);
             this.panel2.Name = "panel2";
@@ -127,7 +129,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(220, 9);
+            this.label1.Location = new System.Drawing.Point(249, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(323, 32);
             this.label1.TabIndex = 8;
@@ -164,7 +166,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(343, 46);
+            this.label2.Location = new System.Drawing.Point(168, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 32);
             this.label2.TabIndex = 10;
@@ -229,3 +231,4 @@
         private System.Windows.Forms.Label label4;
     }
 }
+

@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 
 namespace Proyecto_Metodologia
@@ -26,11 +27,11 @@ namespace Proyecto_Metodologia
         //
         public FrmSistemaVentas()
         {
-
+       
             InitializeComponent();
             FrmLogin test = new FrmLogin();
             test.ShowDialog();
-            txtheadtext.Text = test.usuario;
+            txtheadtext.Text = test.usuario ;
             txtcategoria.Text = validarcategoria(test.usuario);
             categoriarango();
 
@@ -39,15 +40,15 @@ namespace Proyecto_Metodologia
 
         public DataSet EjecutarSelect(string pConsulta)
         {//-- Método para ejecutar consultas del tipo SELECT
-
             string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
             using (SqlConnection conexion = new SqlConnection(cnn))
             {
                 conexion.Open();
                 SqlDataAdapter a = new SqlDataAdapter();
-                a.SelectCommand = new SqlCommand(pConsulta, conexion);
+                using (SqlCommand cmd = new SqlCommand(pConsulta, conexion)) ;
+                a.SelectCommand=new SqlCommand(pConsulta,conexion);
                 aDatos = new DataSet();
-                // aAdaptador.Fill(aDatos);
+               // aAdaptador.Fill(aDatos);
                 a.Fill(aDatos);
                 conexion.Close();
             }
@@ -62,7 +63,7 @@ namespace Proyecto_Metodologia
             else
                 return "";
         }
-        public string validarcategoria(String pusuario)
+        public string  validarcategoria(String pusuario)
         {
             string Datos;
             string Consulta = "select * from TUsuarios where  Usuario='" + pusuario + "'";
@@ -79,12 +80,13 @@ namespace Proyecto_Metodologia
             if (txtcategoria.Text == "Cajero")
             {
                 btnusuarios.Enabled = false;
+               
             }
         }
         private void AbrirFormularioHijo(Form FrmHijo)
         {
 
-
+ 
             FrmHijo.TopLevel = false;
             FrmHijo.FormBorderStyle = FormBorderStyle.None;
             FrmHijo.Dock = DockStyle.Fill;
@@ -95,7 +97,7 @@ namespace Proyecto_Metodologia
         }
         private void btnusuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmRegistro());
+            AbrirFormularioHijo(new FrmRegistroUsuarios());
         }
 
         private void btnventas_Click(object sender, EventArgs e)
@@ -106,6 +108,7 @@ namespace Proyecto_Metodologia
         private void btnarqueo_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new FrmArqueo());
+
         }
     }
 }

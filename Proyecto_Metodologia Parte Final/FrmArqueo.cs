@@ -18,13 +18,22 @@ namespace Proyecto_Metodologia
         public FrmArqueo()
         {
             InitializeComponent();
+            lbHora.Text = DateTime.Now.TimeOfDay.Hours.ToString() + ":" + DateTime.Now.TimeOfDay.Minutes.ToString();
+            dateTimeArqueo.Value = DateTime.Now;
+            validarfecha();
+            dgventas.Columns["CodVenta"].Width = 150;
+            dgventas.Columns["CodVenta"].HeaderText = "Codigo de Venta";
+            dgventas.Columns["PrecioTotal"].Width = 160;
+            dgventas.Columns["Fecha"].Width = 175;
+            dgventas.Columns["Estado"].Visible = false;
+            total();
         }
 
         private void btnConteo_Click(object sender, EventArgs e)
         {
             FrmConteo c = new FrmConteo();
             c.ShowDialog();
-            float b = c.obtenerdatos();
+            double b = c.obtenerdatos();
             if (b != 0)
             {
                 txtconteo.Text = b.ToString();
@@ -36,12 +45,12 @@ namespace Proyecto_Metodologia
         }
         public DataSet EjecutarSelect(string pConsulta)
         {//-- Método para ejecutar consultas del tipo SELECT
-
             string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
             using (SqlConnection conexion = new SqlConnection(cnn))
             {
                 conexion.Open();
                 SqlDataAdapter a = new SqlDataAdapter();
+                using (SqlCommand cmd = new SqlCommand(pConsulta, conexion)) ;
                 a.SelectCommand = new SqlCommand(pConsulta, conexion);
                 aDatos = new DataSet();
                 // aAdaptador.Fill(aDatos);
@@ -57,20 +66,24 @@ namespace Proyecto_Metodologia
                 return Datos.Tables[0].Rows[0][pNombreCampo].ToString();
             }
             else
-            return "";
+                return "";
         }
         private void dateTimeArqueo_ValueChanged(object sender, EventArgs e)
         {
-            dgventas.DataSource= validarfecha();
-            dgventas.Columns["CodigoVenta"].Width = 150;
-            dgventas.Columns["CodigoVenta"].HeaderText = "Codigo de Venta";
+           dgventas.DataSource= validarfecha();
+            dgventas.Columns["CodVenta"].Width = 150;
+            dgventas.Columns["CodVenta"].HeaderText = "Codigo de Venta";
             dgventas.Columns["PrecioTotal"].Width = 160;
-            dgventas.Columns["Fecha"].Width = 180;
+            dgventas.Columns["Fecha"].Width = 175;
+            dgventas.Columns["Estado"].Visible = false;
             total();
+            lbHora.Text = DateTime.Now.TimeOfDay.Hours.ToString() + ":" + DateTime.Now.TimeOfDay.Minutes.ToString();
         }
         public DataTable validarfecha()
         {
-            string Consulta = "SELECT * FROM TVentas WHERE Fecha = '" +dateTimeArqueo.Value.ToShortDateString()  + "'";
+            string Consulta = "SELECT * FROM TVentas WHERE Fecha" +
+                " = '" + dateTimeArqueo.Value.Year + "/" + dateTimeArqueo.Value.Month + "/" + dateTimeArqueo.Value.Day + "'" +
+                "AND Estado='VENDIDO'";
           
             EjecutarSelect(Consulta);
             return Datos.Tables[0];
@@ -78,11 +91,13 @@ namespace Proyecto_Metodologia
         public void total()
         {
             int i = 0;
-            float total = 0;
-            float sub = 0;
+            double total = 0;
+            double sub = 0;
+            Math.Round(total, 2);
+            Math.Round(sub, 2);
             while (i<dgventas.RowCount)
             {
-                sub = float.Parse(dgventas[1, i].Value.ToString());
+                sub = double.Parse(dgventas[1, i].Value.ToString());
                 total = total + sub;
                 i++;
             }
@@ -91,18 +106,36 @@ namespace Proyecto_Metodologia
 
         private void txtconteo_TextChanged(object sender, EventArgs e)
         {
-            actualizarDiferencia();
+            if(txttotal.Text!="" && txtconteo.Text != "")
+            {
+                lbDiferencia.Text = (double.Parse(txttotal.Text) - double.Parse(txtconteo.Text)).ToString();
+                lbHora.Text = DateTime.Now.TimeOfDay.Hours.ToString() + ":" + DateTime.Now.TimeOfDay.Minutes.ToString();
+            }
         }
 
-        private void txttotal_TextChanged(object sender, EventArgs e)
+        private void iconButton2_Click(object sender, EventArgs e)
         {
-            actualizarDiferencia();
+            FrmLogin test = new FrmLogin();
+            test.ShowDialog();
+            string usuario=test.usuario;
+      
+            string categoria = validarcategoria(usuario);
+            string Consulta = "insert into arqueo values('"+usuario+"','"+categoria+"','"+
+                dateTimeArqueo.Value.Year + "/" + dateTimeArqueo.Value.Month + "/" + dateTimeArqueo.Value.Day 
+                +"','"+lbHora.Text+ "','"+lbDiferencia.Text+"','"+txttotal.Text+"')";
+
+            EjecutarSelect(Consulta);
+            txttotal.Text = "";
+            txtconteo.Text = "";
+            lbDiferencia.Text = "";
         }
-        private void actualizarDiferencia()
+        public string validarcategoria(String pusuario)
         {
-            double totV = txttotal.Text != "" ? double.Parse(txttotal.Text) : 0;
-            double totC = txtconteo.Text != "" ? double.Parse(txtconteo.Text) : 0;
-            lbDiferencia.Text = (Math.Round(totV - totC,2)).ToString();
+            string Datos;
+            string Consulta = "select * from TUsuarios where  Usuario='" + pusuario + "'";
+            EjecutarSelect(Consulta);
+            Datos = ValorAtributo("Categoria");
+            return Datos;
         }
     }
 }

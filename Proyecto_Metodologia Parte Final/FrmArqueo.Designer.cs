@@ -45,9 +45,15 @@
             this.dateTimeArqueo = new System.Windows.Forms.DateTimePicker();
             this.lbTituloVentas = new System.Windows.Forms.Label();
             this.dgventas = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panelcontenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgventas)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,6 +91,8 @@
             // panelcontenido
             // 
             this.panelcontenido.BackColor = System.Drawing.Color.White;
+            this.panelcontenido.Controls.Add(this.groupBox1);
+            this.panelcontenido.Controls.Add(this.panel2);
             this.panelcontenido.Controls.Add(this.txttotal);
             this.panelcontenido.Controls.Add(this.lbDiferencia);
             this.panelcontenido.Controls.Add(this.lbTituloDiferencia);
@@ -92,10 +100,7 @@
             this.panelcontenido.Controls.Add(this.txtconteo);
             this.panelcontenido.Controls.Add(this.lbTituloConteo);
             this.panelcontenido.Controls.Add(this.lbVentas);
-            this.panelcontenido.Controls.Add(this.lbHora);
-            this.panelcontenido.Controls.Add(this.label3);
             this.panelcontenido.Controls.Add(this.lbFecha);
-            this.panelcontenido.Controls.Add(this.dateTimeArqueo);
             this.panelcontenido.Controls.Add(this.lbTituloVentas);
             this.panelcontenido.Controls.Add(this.dgventas);
             this.panelcontenido.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -109,17 +114,16 @@
             // 
             this.txttotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txttotal.Enabled = false;
-            this.txttotal.Location = new System.Drawing.Point(361, 354);
+            this.txttotal.Location = new System.Drawing.Point(361, 323);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(87, 13);
             this.txttotal.TabIndex = 14;
-            this.txttotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             // 
             // lbDiferencia
             // 
             this.lbDiferencia.AutoSize = true;
             this.lbDiferencia.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiferencia.Location = new System.Drawing.Point(355, 416);
+            this.lbDiferencia.Location = new System.Drawing.Point(359, 382);
             this.lbDiferencia.Name = "lbDiferencia";
             this.lbDiferencia.Size = new System.Drawing.Size(33, 16);
             this.lbDiferencia.TabIndex = 13;
@@ -129,7 +133,7 @@
             // 
             this.lbTituloDiferencia.AutoSize = true;
             this.lbTituloDiferencia.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTituloDiferencia.Location = new System.Drawing.Point(256, 416);
+            this.lbTituloDiferencia.Location = new System.Drawing.Point(260, 382);
             this.lbTituloDiferencia.Name = "lbTituloDiferencia";
             this.lbTituloDiferencia.Size = new System.Drawing.Size(86, 16);
             this.lbTituloDiferencia.TabIndex = 12;
@@ -138,7 +142,7 @@
             // btnConteo
             // 
             this.btnConteo.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConteo.Location = new System.Drawing.Point(454, 377);
+            this.btnConteo.Location = new System.Drawing.Point(454, 346);
             this.btnConteo.Name = "btnConteo";
             this.btnConteo.Size = new System.Drawing.Size(62, 26);
             this.btnConteo.TabIndex = 11;
@@ -149,7 +153,7 @@
             // txtconteo
             // 
             this.txtconteo.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtconteo.Location = new System.Drawing.Point(361, 379);
+            this.txtconteo.Location = new System.Drawing.Point(361, 348);
             this.txtconteo.Name = "txtconteo";
             this.txtconteo.Size = new System.Drawing.Size(87, 24);
             this.txtconteo.TabIndex = 10;
@@ -159,7 +163,7 @@
             // 
             this.lbTituloConteo.AutoSize = true;
             this.lbTituloConteo.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTituloConteo.Location = new System.Drawing.Point(240, 384);
+            this.lbTituloConteo.Location = new System.Drawing.Point(240, 353);
             this.lbTituloConteo.Name = "lbTituloConteo";
             this.lbTituloConteo.Size = new System.Drawing.Size(107, 16);
             this.lbTituloConteo.TabIndex = 9;
@@ -169,7 +173,7 @@
             // 
             this.lbVentas.AutoSize = true;
             this.lbVentas.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVentas.Location = new System.Drawing.Point(242, 354);
+            this.lbVentas.Location = new System.Drawing.Point(242, 323);
             this.lbVentas.Name = "lbVentas";
             this.lbVentas.Size = new System.Drawing.Size(104, 16);
             this.lbVentas.TabIndex = 8;
@@ -179,7 +183,7 @@
             // 
             this.lbHora.AutoSize = true;
             this.lbHora.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHora.Location = new System.Drawing.Point(597, 37);
+            this.lbHora.Location = new System.Drawing.Point(417, 28);
             this.lbHora.Name = "lbHora";
             this.lbHora.Size = new System.Drawing.Size(40, 16);
             this.lbHora.TabIndex = 6;
@@ -189,7 +193,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(542, 37);
+            this.label3.Location = new System.Drawing.Point(362, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 5;
@@ -208,8 +212,9 @@
             // dateTimeArqueo
             // 
             this.dateTimeArqueo.CustomFormat = "yy/MM/dd";
+            this.dateTimeArqueo.Enabled = false;
             this.dateTimeArqueo.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeArqueo.Location = new System.Drawing.Point(232, 31);
+            this.dateTimeArqueo.Location = new System.Drawing.Point(52, 22);
             this.dateTimeArqueo.Name = "dateTimeArqueo";
             this.dateTimeArqueo.Size = new System.Drawing.Size(255, 24);
             this.dateTimeArqueo.TabIndex = 3;
@@ -219,7 +224,7 @@
             // 
             this.lbTituloVentas.AutoSize = true;
             this.lbTituloVentas.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTituloVentas.Location = new System.Drawing.Point(253, 78);
+            this.lbTituloVentas.Location = new System.Drawing.Point(283, 70);
             this.lbTituloVentas.Name = "lbTituloVentas";
             this.lbTituloVentas.Size = new System.Drawing.Size(262, 31);
             this.lbTituloVentas.TabIndex = 2;
@@ -231,11 +236,63 @@
             this.dgventas.AllowUserToDeleteRows = false;
             this.dgventas.BackgroundColor = System.Drawing.Color.White;
             this.dgventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgventas.Location = new System.Drawing.Point(148, 125);
+            this.dgventas.Location = new System.Drawing.Point(143, 104);
             this.dgventas.Name = "dgventas";
             this.dgventas.ReadOnly = true;
             this.dgventas.Size = new System.Drawing.Size(519, 202);
             this.dgventas.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Maroon;
+            this.panel2.Controls.Add(this.iconButton3);
+            this.panel2.Controls.Add(this.iconButton2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 421);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(782, 56);
+            this.panel2.TabIndex = 15;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 35;
+            this.iconButton3.Location = new System.Drawing.Point(69, 4);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(157, 46);
+            this.iconButton3.TabIndex = 2;
+            this.iconButton3.Text = "REGISTRO DE ARQUEOS";
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 35;
+            this.iconButton2.Location = new System.Drawing.Point(535, 4);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(157, 46);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.Text = "REGISTRAR ARQUEO";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dateTimeArqueo);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbHora);
+            this.groupBox1.Location = new System.Drawing.Point(153, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(521, 64);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ARQUEO";
             // 
             // FrmArqueo
             // 
@@ -253,6 +310,9 @@
             this.panelcontenido.ResumeLayout(false);
             this.panelcontenido.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgventas)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -276,5 +336,9 @@
         private System.Windows.Forms.Label lbVentas;
         private System.Windows.Forms.Label lbDiferencia;
         private System.Windows.Forms.TextBox txttotal;
+        private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -21,7 +21,7 @@ namespace Proyecto_Metodologia
         public FrmProductos()
         {
             InitializeComponent();
-
+            
         }
         public DataSet Datos
         {
@@ -54,31 +54,31 @@ namespace Proyecto_Metodologia
         }
         public DataTable buscarproductos(string Pdescripcion)
         {
-            string Consulta = "select * from TProductos where Descripcion like '" + Pdescripcion + "%'";
-
-            EjecutarSelect(Consulta);
+            string Consulta = "select * from TAlmacenProductos where Descripcion like '" + Pdescripcion + "%'";
+           
+          EjecutarSelect(Consulta);
             return Datos.Tables[0];
         }
 
 
         private void txtproductos_TextChanged(object sender, EventArgs e)
         {
-            dgvproductos.DataSource = buscarproductos(txtproductos.Text);
+           dgvproductos.DataSource= buscarproductos(txtproductos.Text);
             dgvproductos.Columns["Unidad"].Visible = false;
             dgvproductos.Columns["PrecioUnitario"].Visible = false;
             dgvproductos.Columns["Descripcion"].Width = 230;
         }
         public string[] obtenerDatos(string pCodigo)
         {
-            string[] datos = new string[5];
-            string Consulta = "select * from TProductos where CodigoProducto= '" + pCodigo + "'";
+            string[] datos= new string[5];
+            string Consulta = "select * from TAlmacenProductos where CodigoProducto= '" + pCodigo + "'";
             EjecutarSelect(Consulta);
             datos[0] = ValorAtributo("CodigoProducto");
             datos[1] = ValorAtributo("Descripcion");
-            datos[2] = ValorAtributo("PrecioUnitario");
-            datos[3] = ValorAtributo("Stock");
-
-
+           datos[2] = ValorAtributo("PrecioUnitario");
+           datos[3] = ValorAtributo("Cantidad");
+            
+           
             DatosT = datos;
             return datos;
         }
@@ -97,9 +97,24 @@ namespace Proyecto_Metodologia
                 DatosT = obtenerDatos(pCodigo);
                 Close();
             }
+
+            if (dgvproductos[1, dgvproductos.CurrentCell.RowIndex].Value.ToString()==" ")
+            {
+                string codigo = dgvproductos[0, dgvproductos.CurrentCell.RowIndex].Value.ToString();
+   
+                DatosT = obtenerDatos(codigo);
+                Close();
+            }
+            if (dgvproductos[2, dgvproductos.CurrentCell.RowIndex].Value.ToString() != " ")
+            {
+                string codigo = dgvproductos[0, dgvproductos.CurrentCell.RowIndex].Value.ToString();
+               
+                DatosT = obtenerDatos(codigo);
+                Close();
+            }
             else
             {
-                MessageBox.Show("No ha seleccionado ningún producto", "ALERTA");
+                MessageBox.Show("No ha seleccionado ningún alumno", "ALERTA");
             }
         }
         public string[] obtenerdatos()
@@ -107,7 +122,7 @@ namespace Proyecto_Metodologia
             return DatosT;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
             Close();
         }

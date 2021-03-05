@@ -51,14 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cConexion.cs" />
-    <Compile Include="cEntidad.cs" />
-    <Compile Include="cUsuario.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmArqueo.cs">
       <SubType>Form</SubType>
@@ -71,18 +68,6 @@
     </Compile>
     <Compile Include="FrmConteo.Designer.cs">
       <DependentUpon>FrmConteo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmListarUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmListarUsuarios.Designer.cs">
-      <DependentUpon>FrmListarUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmOlvidasteContraseña.cs">
       <SubType>Form</SubType>
@@ -102,6 +87,24 @@
     <Compile Include="FrmRegistro.Designer.cs">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistroArqueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroArqueo.Designer.cs">
+      <DependentUpon>FrmRegistroArqueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrodeVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrodeVentas.Designer.cs">
+      <DependentUpon>FrmRegistrodeVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroUsuarios.Designer.cs">
+      <DependentUpon>FrmRegistroUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSistemaVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,20 +119,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmArqueo.resx">
       <DependentUpon>FrmArqueo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConteo.resx">
       <DependentUpon>FrmConteo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmListarUsuarios.resx">
-      <DependentUpon>FrmListarUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOlvidasteContraseña.resx">
       <DependentUpon>FrmOlvidasteContraseña.cs</DependentUpon>
@@ -139,6 +136,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistro.resx">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroArqueo.resx">
+      <DependentUpon>FrmRegistroArqueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrodeVentas.resx">
+      <DependentUpon>FrmRegistrodeVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroUsuarios.resx">
+      <DependentUpon>FrmRegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSistemaVentas.resx">
       <DependentUpon>FrmSistemaVentas.cs</DependentUpon>
@@ -154,7 +160,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -169,15 +174,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\informaticas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\unsaac.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Universidad-Nacional-San-Antonio-Abad-del-Cusco.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

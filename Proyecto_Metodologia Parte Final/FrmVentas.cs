@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.Runtime;
 
 namespace Proyecto_Metodologia
 {
-
+    
     public partial class FrmVentas : Form
     {
         private DataSet aDatos;
@@ -29,8 +30,8 @@ namespace Proyecto_Metodologia
         {
             FrmProductos a = new FrmProductos();
             a.ShowDialog();
-            string[] b = a.obtenerdatos();
-            if (a.DatosT[0] != null)
+           string []b= a.obtenerdatos();
+            if (a.DatosT[0]!=null)
             {
                 txtcodp.Text = b[0];
                 txtnombre.Text = a.DatosT[1];
@@ -43,22 +44,22 @@ namespace Proyecto_Metodologia
         {
             try
             {
-                int actualizar = int.Parse(txtStock.Text) - (int)nupcantidad.Value;
-                double preciounidad = double.Parse(txtpreciou.Text);
-                double total = (int)nupcantidad.Value * preciounidad;
-                dgvVentas.Rows.Add(txtcodp.Text, txtnombre.Text, nupcantidad.Value.ToString(), total.ToString());
-                actualizarstock(actualizar, txtcodp.Text);
-                calculartotal();
+                int actualizar = int.Parse(txtStock.Text)-(int)nupcantidad.Value;
+            double preciounidad = double.Parse(txtpreciou.Text);
+            double total = (int)nupcantidad.Value*preciounidad;
+            dgvVentas.Rows.Add(txtcodp.Text,txtnombre.Text,nupcantidad.Value.ToString(),total.ToString());
+            actualizarstock(actualizar,txtcodp.Text);
+            calculartotal();
 
-                clear();
-
-            }
-            catch
-            {
-                MessageBox.Show("INGRESA UN PRODUCTO");
-            }
+            clear();
 
         }
+            catch
+            {
+MessageBox.Show("INGRESA UN PRODUCTO");
+            }
+
+}
         public void clear()
         {
             txtcodp.Text = "";
@@ -77,12 +78,13 @@ namespace Proyecto_Metodologia
         }
         public DataSet EjecutarSelect(string pConsulta)
         {//-- Método para ejecutar consultas del tipo SELECT
-            string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
-            using (SqlConnection conexion = new SqlConnection(cnn))
+
+            using (SqlConnection conexion = new SqlConnection(@"Data Source=.\SQLEXPRESS;" +
+               "Initial Catalog=BDSISTEMA_VENTAS;Integrated Security=SSPI;"))
             {
                 conexion.Open();
                 SqlDataAdapter a = new SqlDataAdapter();
-                // using (SqlCommand cmd = new SqlCommand(pConsulta, conexion)) ;
+                using (SqlCommand cmd = new SqlCommand(pConsulta, conexion)) ;
                 a.SelectCommand = new SqlCommand(pConsulta, conexion);
                 aDatos = new DataSet();
                 // aAdaptador.Fill(aDatos);
@@ -102,7 +104,7 @@ namespace Proyecto_Metodologia
         }
         public void actualizarstock(int cantidad, string codproducto)
         {
-            string Consulta = "update TProductos set Stock =" + cantidad + " where CodigoProducto='" + codproducto + "'";
+            string Consulta = "update TAlmacenProductos set Cantidad =" + cantidad + " where CodigoProducto='" + codproducto + "'";
 
             EjecutarSelect(Consulta);
         }
@@ -112,7 +114,9 @@ namespace Proyecto_Metodologia
 
             try
             {
+
                 int indice = dgvVentas.CurrentCell.RowIndex;
+
 
                 txtnombre.Text = dgvVentas[2, indice].Value.ToString();
                 int cantidad = int.Parse(dgvVentas[2, indice].Value.ToString());
@@ -133,23 +137,25 @@ namespace Proyecto_Metodologia
         public string buscarstock(string pCodigoProducto)
         {
             string stock;
-            string Consulta = "select Stock from TProductos where CodigoProducto='" + pCodigoProducto + "'";
+            string Consulta = "select Cantidad from TAlmacenProductos where CodigoProducto='" + pCodigoProducto + "'";
 
             EjecutarSelect(Consulta);
-            stock = ValorAtributo("Stock");
+            stock = ValorAtributo("Cantidad");
             return stock;
         }
         public string ultimoValorAtributo()
         {//-- Recupera el valor de un atributo del dataset
             string A;
 
-            string Consulta = "select MAX(CodigoVenta) AS  ULTIMO  from TVentas";
+            string Consulta = "select MAX(CodVenta) AS  ULTIMO  from TVentas";
             EjecutarSelect(Consulta);
             A = ValorAtributo("ULTIMO");
             if (A == "")
             {
                 A = "E0000";
             }
+
+
 
             return A;
         }
@@ -160,7 +166,7 @@ namespace Proyecto_Metodologia
             A = ultimoValorAtributo();
 
             string b = A.Substring(0, 5);
-            double d = double.Parse(A.Substring(1, 4));
+            double d = double.Parse(A.Substring(2, 4));
             d = d + 1;
             if (d < 10)
             {
@@ -199,6 +205,7 @@ namespace Proyecto_Metodologia
             igv = subtotal * (double)0.18;
             ventatotal = subtotal + igv;
 
+            Math.Round(ventatotal, 2);
             txtsubtotal.Text = subtotal.ToString();
             txtigv.Text = igv.ToString();
             txttotal.Text = ventatotal.ToString();
@@ -210,6 +217,14 @@ namespace Proyecto_Metodologia
             }
         }
 
+
+
+
+
+
+
+
+
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
@@ -217,13 +232,56 @@ namespace Proyecto_Metodologia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Consulta = "insert into TVentas values" + "('" + txtCodVentas.Text + "'," + txttotal.Text + ",'" + fechaventa.Value.ToShortDateString() + "', null)";
+            string Consulta = "insert into TVentas values" +
+             "('" + txtCodVentas.Text + "'," + txttotal.Text + ",'" +
+             fechaventa.Value.Year+"/"+fechaventa.Value.Month+"/"+fechaventa.Value.Day +
+             "','VENDIDO')";
 
             EjecutarSelect(Consulta);
             limpiarventa();
             dgvVentas.Rows.Clear();
             autoincrementable();
             clear();
+        }
+
+        private void txtcodp_TextChanged(object sender, EventArgs e)
+        {
+            if (txtcodp.Text == "")
+            {
+                clear();
+            }
+
+                if (txtcodp.Text.Length == 4)
+            {
+               string[] relleno= obtenerDatos(txtcodp.Text);
+                txtcodp.Text = relleno[0];
+                txtnombre.Text = relleno[1];
+                txtpreciou.Text = relleno[2];
+                txtStock.Text = relleno[3];
+                        
+            }
+
+            
+        }
+        public string[] obtenerDatos(string pCodigo)
+        {
+            string[] datos = new string[5];
+            string Consulta = "select * from TAlmacenProductos where CodigoProducto= '" + pCodigo + "'";
+            EjecutarSelect(Consulta);
+            datos[0] = ValorAtributo("CodigoProducto");
+            datos[1] = ValorAtributo("Descripcion");
+            datos[2] = ValorAtributo("PrecioUnitario");
+            datos[3] = ValorAtributo("Cantidad");
+
+
+           
+            return datos;
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            FrmRegistrodeVentas re = new FrmRegistrodeVentas();
+            re.ShowDialog();
         }
     }
 }

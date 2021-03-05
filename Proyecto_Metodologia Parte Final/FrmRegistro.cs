@@ -87,5 +87,10 @@ namespace Proyecto_Metodologia
         {
             Close();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

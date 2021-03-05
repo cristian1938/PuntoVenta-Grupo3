@@ -65,7 +65,7 @@
             this.txtcategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcategoria.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcategoria.ForeColor = System.Drawing.Color.White;
-            this.txtcategoria.Location = new System.Drawing.Point(681, 36);
+            this.txtcategoria.Location = new System.Drawing.Point(750, 36);
             this.txtcategoria.Name = "txtcategoria";
             this.txtcategoria.Size = new System.Drawing.Size(172, 27);
             this.txtcategoria.TabIndex = 5;
@@ -84,7 +84,7 @@
             this.txtheadtext.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.txtheadtext.IconSize = 25;
             this.txtheadtext.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.txtheadtext.Location = new System.Drawing.Point(641, 7);
+            this.txtheadtext.Location = new System.Drawing.Point(710, 7);
             this.txtheadtext.Name = "txtheadtext";
             this.txtheadtext.Size = new System.Drawing.Size(212, 31);
             this.txtheadtext.TabIndex = 4;
@@ -96,7 +96,7 @@
             this.USUSARIO.AutoSize = true;
             this.USUSARIO.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.USUSARIO.ForeColor = System.Drawing.Color.White;
-            this.USUSARIO.Location = new System.Drawing.Point(732, 15);
+            this.USUSARIO.Location = new System.Drawing.Point(801, 15);
             this.USUSARIO.Name = "USUSARIO";
             this.USUSARIO.Size = new System.Drawing.Size(0, 34);
             this.USUSARIO.TabIndex = 3;
@@ -105,9 +105,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(183, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -117,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(320, 12);
+            this.label1.Location = new System.Drawing.Point(389, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 37);
             this.label1.TabIndex = 0;
@@ -223,7 +223,7 @@
             this.Controls.Add(this.panelcontenido);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "FrmSistemaVentas";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
