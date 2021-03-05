@@ -45,6 +45,8 @@
             this.txtpreciou = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.nupcantidad = new System.Windows.Forms.NumericUpDown();
@@ -58,8 +60,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtCodVentas = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -150,6 +150,7 @@
             // fechaventa
             // 
             this.fechaventa.CustomFormat = "yy/MM/dd";
+            this.fechaventa.Enabled = false;
             this.fechaventa.Location = new System.Drawing.Point(535, 170);
             this.fechaventa.Name = "fechaventa";
             this.fechaventa.Size = new System.Drawing.Size(200, 20);
@@ -194,6 +195,7 @@
             // 
             // txtpreciou
             // 
+            this.txtpreciou.Enabled = false;
             this.txtpreciou.Location = new System.Drawing.Point(618, 101);
             this.txtpreciou.Name = "txtpreciou";
             this.txtpreciou.Size = new System.Drawing.Size(100, 20);
@@ -201,6 +203,7 @@
             // 
             // txtStock
             // 
+            this.txtStock.Enabled = false;
             this.txtStock.Location = new System.Drawing.Point(618, 132);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 20);
@@ -216,6 +219,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(798, 56);
             this.panel2.TabIndex = 11;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 35;
+            this.iconButton3.Location = new System.Drawing.Point(69, 4);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(157, 46);
+            this.iconButton3.TabIndex = 2;
+            this.iconButton3.Text = "REGISTRO DE VENTAS";
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 35;
+            this.iconButton2.Location = new System.Drawing.Point(535, 4);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(157, 46);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.Text = "REGISTRAR VENTA";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -301,6 +334,7 @@
             // 
             // txtsubtotal
             // 
+            this.txtsubtotal.Enabled = false;
             this.txtsubtotal.Location = new System.Drawing.Point(164, 391);
             this.txtsubtotal.Name = "txtsubtotal";
             this.txtsubtotal.Size = new System.Drawing.Size(100, 20);
@@ -309,6 +343,7 @@
             // 
             // txtigv
             // 
+            this.txtigv.Enabled = false;
             this.txtigv.Location = new System.Drawing.Point(354, 391);
             this.txtigv.Name = "txtigv";
             this.txtigv.Size = new System.Drawing.Size(100, 20);
@@ -316,6 +351,7 @@
             // 
             // txttotal
             // 
+            this.txttotal.Enabled = false;
             this.txttotal.Location = new System.Drawing.Point(612, 391);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(100, 20);
@@ -333,9 +369,10 @@
             // 
             // txtCodVentas
             // 
+            this.txtCodVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodVentas.Location = new System.Drawing.Point(368, 62);
             this.txtCodVentas.Name = "txtCodVentas";
-            this.txtCodVentas.Size = new System.Drawing.Size(124, 20);
+            this.txtCodVentas.Size = new System.Drawing.Size(124, 24);
             this.txtCodVentas.TabIndex = 23;
             // 
             // iconButton1
@@ -350,36 +387,6 @@
             this.iconButton1.TabIndex = 24;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 35;
-            this.iconButton2.Location = new System.Drawing.Point(535, 4);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(157, 46);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.Text = "REGISTRAR VENTA";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            this.iconButton2.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 35;
-            this.iconButton3.Location = new System.Drawing.Point(69, 4);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(157, 46);
-            this.iconButton3.TabIndex = 2;
-            this.iconButton3.Text = "REGISTRO DE VENTAS";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // FrmVentas
             // 

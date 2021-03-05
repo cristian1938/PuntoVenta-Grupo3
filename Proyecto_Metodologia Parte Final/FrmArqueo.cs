@@ -108,7 +108,9 @@ namespace Proyecto_Metodologia
         {
             if(txttotal.Text!="" && txtconteo.Text != "")
             {
-                lbDiferencia.Text = (double.Parse(txttotal.Text) - double.Parse(txtconteo.Text)).ToString();
+                double diferencia = (double.Parse(txttotal.Text) - double.Parse(txtconteo.Text));
+
+                lbDiferencia.Text = Math.Round(diferencia, 2).ToString();
                 lbHora.Text = DateTime.Now.TimeOfDay.Hours.ToString() + ":" + DateTime.Now.TimeOfDay.Minutes.ToString();
             }
         }
@@ -136,6 +138,12 @@ namespace Proyecto_Metodologia
             EjecutarSelect(Consulta);
             Datos = ValorAtributo("Categoria");
             return Datos;
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            FrmRegistroArqueo re = new FrmRegistroArqueo();
+            re.ShowDialog();
         }
     }
 }

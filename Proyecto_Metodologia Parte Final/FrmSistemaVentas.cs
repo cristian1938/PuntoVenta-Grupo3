@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
@@ -75,11 +74,12 @@ namespace Proyecto_Metodologia
         {
             if (txtcategoria.Text == "Administrador")
             {
-                btnventas.Enabled = false;
+                btnventas.Visible = false;
             }
             if (txtcategoria.Text == "Cajero")
             {
-                btnusuarios.Enabled = false;
+                btnusuarios.Visible = false;
+                btnregistro.Visible = false;
                
             }
         }
@@ -97,7 +97,7 @@ namespace Proyecto_Metodologia
         }
         private void btnusuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmRegistroUsuarios());
+            AbrirFormularioHijo(new FrmRegistro());
         }
 
         private void btnventas_Click(object sender, EventArgs e)
@@ -109,6 +109,16 @@ namespace Proyecto_Metodologia
         {
             AbrirFormularioHijo(new FrmArqueo());
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmRegistroUsuarios());
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

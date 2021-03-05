@@ -7,10 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
-using System.Runtime;
 using System.Configuration;
+using System.Runtime;
 
 
 namespace Proyecto_Metodologia
@@ -28,6 +27,7 @@ namespace Proyecto_Metodologia
             dgventas.Columns["CodVenta"].HeaderText = "Codigo de Venta";
             dgventas.Columns["PrecioTotal"].Width = 132;
             dgventas.Columns["Fecha"].Width = 150;
+            txttotal.Text = dgventas.Rows.Count.ToString();
         }
         public DataSet Datos
         {

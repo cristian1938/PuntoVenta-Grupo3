@@ -23,7 +23,6 @@ namespace Proyecto_Metodologia
         {
             try
             {
-
                 string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
                 using (SqlConnection conexion = new SqlConnection(cnn))
                 {

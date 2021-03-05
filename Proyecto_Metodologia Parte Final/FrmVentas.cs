@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using System.Runtime;
+using System.Configuration;
 
 namespace Proyecto_Metodologia
 {
@@ -78,9 +78,8 @@ MessageBox.Show("INGRESA UN PRODUCTO");
         }
         public DataSet EjecutarSelect(string pConsulta)
         {//-- Método para ejecutar consultas del tipo SELECT
-
-            using (SqlConnection conexion = new SqlConnection(@"Data Source=.\SQLEXPRESS;" +
-               "Initial Catalog=BDSISTEMA_VENTAS;Integrated Security=SSPI;"))
+            string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
+            using (SqlConnection conexion = new SqlConnection(cnn))
             {
                 conexion.Open();
                 SqlDataAdapter a = new SqlDataAdapter();
@@ -116,7 +115,6 @@ MessageBox.Show("INGRESA UN PRODUCTO");
             {
 
                 int indice = dgvVentas.CurrentCell.RowIndex;
-
 
                 txtnombre.Text = dgvVentas[2, indice].Value.ToString();
                 int cantidad = int.Parse(dgvVentas[2, indice].Value.ToString());
@@ -154,8 +152,6 @@ MessageBox.Show("INGRESA UN PRODUCTO");
             {
                 A = "E0000";
             }
-
-
 
             return A;
         }
@@ -205,10 +201,10 @@ MessageBox.Show("INGRESA UN PRODUCTO");
             igv = subtotal * (double)0.18;
             ventatotal = subtotal + igv;
 
-            Math.Round(ventatotal, 2);
-            txtsubtotal.Text = subtotal.ToString();
-            txtigv.Text = igv.ToString();
-            txttotal.Text = ventatotal.ToString();
+            
+            txtsubtotal.Text = Math.Round(subtotal, 2).ToString();
+            txtigv.Text = Math.Round(igv, 2).ToString();
+            txttotal.Text = Math.Round(ventatotal, 2).ToString();
             if (dgvVentas.Rows.Count == 0)
             {
                 txtsubtotal.Text = "0.00";
@@ -216,15 +212,6 @@ MessageBox.Show("INGRESA UN PRODUCTO");
                 txttotal.Text = "0.00";
             }
         }
-
-
-
-
-
-
-
-
-
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 

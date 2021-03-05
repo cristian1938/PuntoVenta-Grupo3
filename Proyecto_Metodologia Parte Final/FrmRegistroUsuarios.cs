@@ -12,7 +12,6 @@ using System.Configuration;
 
 namespace Proyecto_Metodologia
 {
-    
     public partial class FrmRegistroUsuarios : Form
     {
         private DataSet aDatos;
@@ -66,27 +65,28 @@ namespace Proyecto_Metodologia
         {
             dgvusuarios.DataSource = datosusuarios();
             dgvusuarios.Columns["Contraseña"].Visible = false;
-
         }
-
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            string Consulta = "update TUsuarios " +
-                "set Usuario='"+txtusuario.Text+"',Nombre='"+txtNombre.Text
-                +"',Correo='"+txtCorreo.Text+"'where Usuario='"+ dgvusuarios[0, dgvusuarios.CurrentCell.RowIndex].Value.ToString()+"'";
+            try
+            {
+                string Consulta = "update TUsuarios " +
+                    "set Usuario='" + txtusuario.Text + "',Nombre='" + txtNombre.Text + "',Apellido='" + txtApellido.Text
+                    + "',Correo='" + txtCorreo.Text + "'where Usuario='" + dgvusuarios[0, dgvusuarios.CurrentCell.RowIndex].Value.ToString() + "'";
 
-            EjecutarSelect(Consulta);
-            MessageBox.Show("ACTUALIZACION CORRECTA");
-            txtusuario.Text = "";
-            txtNombre.Text = "";
-            txtApellido.Text = "";
-            txtCorreo.Text = "";
-            llenardatos();
+                EjecutarSelect(Consulta);
+                MessageBox.Show("ACTUALIZACION CORRECTA");
+                txtusuario.Text = "";
+                txtNombre.Text = "";
+                txtApellido.Text = "";
+                txtCorreo.Text = "";
+                llenardatos();
+            }
+            catch
+            {
+                MessageBox.Show("YA EXISTE ESE USUARIO ");
+            }
         }
-
-     
-
-       
 
         private void dgvusuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -103,8 +103,6 @@ namespace Proyecto_Metodologia
                 txtNombre.Text = dgvusuarios[1, dgvusuarios.CurrentCell.RowIndex].Value.ToString();
                 txtApellido.Text = dgvusuarios[2, dgvusuarios.CurrentCell.RowIndex].Value.ToString();
                 txtCorreo.Text = dgvusuarios[5, dgvusuarios.CurrentCell.RowIndex].Value.ToString();
-
-
             }
         }
 
@@ -120,6 +118,4 @@ namespace Proyecto_Metodologia
             llenardatos();
         }
     }
-
-
 }

@@ -32,6 +32,9 @@
             this.USUSARIO = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelcontenido = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.lbVentas = new System.Windows.Forms.Label();
             this.lbHora = new System.Windows.Forms.Label();
@@ -39,13 +42,10 @@
             this.lbFecha = new System.Windows.Forms.Label();
             this.dateTimeVentas = new System.Windows.Forms.DateTimePicker();
             this.dgventas = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panelcontenido.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgventas)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgventas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,7 +74,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(193, 9);
+            this.label1.Location = new System.Drawing.Point(208, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(308, 37);
             this.label1.TabIndex = 0;
@@ -97,6 +97,53 @@
             this.panelcontenido.Name = "panelcontenido";
             this.panelcontenido.Size = new System.Drawing.Size(692, 468);
             this.panelcontenido.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Maroon;
+            this.panel3.Controls.Add(this.iconButton2);
+            this.panel3.Controls.Add(this.iconButton1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 395);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(692, 73);
+            this.panel3.TabIndex = 15;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.iconButton2.IconColor = System.Drawing.Color.Maroon;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 35;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton2.Location = new System.Drawing.Point(486, 13);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(113, 40);
+            this.iconButton2.TabIndex = 3;
+            this.iconButton2.Text = "Cancelar Venta";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.iconButton1.IconColor = System.Drawing.Color.Maroon;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 35;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.Location = new System.Drawing.Point(72, 13);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(113, 40);
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.Text = "Cancelar";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // txttotal
             // 
@@ -170,53 +217,6 @@
             this.dgventas.Size = new System.Drawing.Size(576, 252);
             this.dgventas.TabIndex = 0;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Maroon;
-            this.panel3.Controls.Add(this.iconButton2);
-            this.panel3.Controls.Add(this.iconButton1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 395);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(692, 73);
-            this.panel3.TabIndex = 15;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Ban;
-            this.iconButton2.IconColor = System.Drawing.Color.Maroon;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 35;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton2.Location = new System.Drawing.Point(486, 13);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(113, 40);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Cancelar Venta";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.iconButton1.IconColor = System.Drawing.Color.Maroon;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.Location = new System.Drawing.Point(72, 13);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(113, 40);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "Cancelar";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
             // FrmRegistrodeVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,14 +224,16 @@
             this.ClientSize = new System.Drawing.Size(692, 534);
             this.Controls.Add(this.panelcontenido);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRegistrodeVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmRegistrodeVentas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelcontenido.ResumeLayout(false);
             this.panelcontenido.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgventas)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgventas)).EndInit();
             this.ResumeLayout(false);
 
         }

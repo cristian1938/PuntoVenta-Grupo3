@@ -23,7 +23,7 @@ namespace Proyecto_Metodologia
         public FrmLogin()
         {
             InitializeComponent();
-           
+            buttonIngresar.Focus();
            
         }
 
