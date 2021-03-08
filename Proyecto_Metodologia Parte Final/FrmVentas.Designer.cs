@@ -45,7 +45,8 @@
             this.txtpreciou = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.nupcantidad = new System.Windows.Forms.NumericUpDown();
@@ -69,6 +70,7 @@
             // 
             this.dgvVentas.AllowUserToAddRows = false;
             this.dgvVentas.AllowUserToDeleteRows = false;
+            this.dgvVentas.BackgroundColor = System.Drawing.Color.White;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodProcuto,
@@ -112,6 +114,7 @@
             this.txtcodp.Name = "txtcodp";
             this.txtcodp.Size = new System.Drawing.Size(100, 20);
             this.txtcodp.TabIndex = 1;
+            this.txtcodp.TextChanged += new System.EventHandler(this.txtcodp_TextChanged);
             // 
             // label1
             // 
@@ -147,6 +150,10 @@
             // fechaventa
             // 
             this.fechaventa.CustomFormat = "yy/MM/dd";
+<<<<<<< HEAD
+=======
+            this.fechaventa.Enabled = false;
+>>>>>>> j-branch
             this.fechaventa.Location = new System.Drawing.Point(535, 170);
             this.fechaventa.Name = "fechaventa";
             this.fechaventa.Size = new System.Drawing.Size(200, 20);
@@ -191,6 +198,7 @@
             // 
             // txtpreciou
             // 
+            this.txtpreciou.Enabled = false;
             this.txtpreciou.Location = new System.Drawing.Point(618, 101);
             this.txtpreciou.Name = "txtpreciou";
             this.txtpreciou.Size = new System.Drawing.Size(100, 20);
@@ -198,6 +206,7 @@
             // 
             // txtStock
             // 
+            this.txtStock.Enabled = false;
             this.txtStock.Location = new System.Drawing.Point(618, 132);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 20);
@@ -206,13 +215,15 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.iconButton3);
+            this.panel2.Controls.Add(this.iconButton2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 427);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(798, 56);
             this.panel2.TabIndex = 11;
             // 
+<<<<<<< HEAD
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(321, 12);
@@ -222,6 +233,37 @@
             this.button1.Text = "REGISTRAR VENTA";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+=======
+            // iconButton3
+            // 
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 35;
+            this.iconButton3.Location = new System.Drawing.Point(69, 4);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(157, 46);
+            this.iconButton3.TabIndex = 2;
+            this.iconButton3.Text = "REGISTRO DE VENTAS";
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 35;
+            this.iconButton2.Location = new System.Drawing.Point(535, 4);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(157, 46);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.Text = "REGISTRAR VENTA";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.button1_Click);
+>>>>>>> j-branch
             // 
             // button2
             // 
@@ -307,6 +349,10 @@
             // 
             // txtsubtotal
             // 
+<<<<<<< HEAD
+=======
+            this.txtsubtotal.Enabled = false;
+>>>>>>> j-branch
             this.txtsubtotal.Location = new System.Drawing.Point(164, 391);
             this.txtsubtotal.Name = "txtsubtotal";
             this.txtsubtotal.Size = new System.Drawing.Size(100, 20);
@@ -315,6 +361,10 @@
             // 
             // txtigv
             // 
+<<<<<<< HEAD
+=======
+            this.txtigv.Enabled = false;
+>>>>>>> j-branch
             this.txtigv.Location = new System.Drawing.Point(354, 391);
             this.txtigv.Name = "txtigv";
             this.txtigv.Size = new System.Drawing.Size(100, 20);
@@ -322,6 +372,10 @@
             // 
             // txttotal
             // 
+<<<<<<< HEAD
+=======
+            this.txttotal.Enabled = false;
+>>>>>>> j-branch
             this.txttotal.Location = new System.Drawing.Point(612, 391);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(100, 20);
@@ -339,9 +393,16 @@
             // 
             // txtCodVentas
             // 
+<<<<<<< HEAD
             this.txtCodVentas.Location = new System.Drawing.Point(368, 62);
             this.txtCodVentas.Name = "txtCodVentas";
             this.txtCodVentas.Size = new System.Drawing.Size(124, 20);
+=======
+            this.txtCodVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodVentas.Location = new System.Drawing.Point(368, 62);
+            this.txtCodVentas.Name = "txtCodVentas";
+            this.txtCodVentas.Size = new System.Drawing.Size(124, 24);
+>>>>>>> j-branch
             this.txtCodVentas.TabIndex = 23;
             // 
             // iconButton1
@@ -419,7 +480,6 @@
         private System.Windows.Forms.TextBox txtpreciou;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown nupcantidad;
@@ -433,5 +493,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCodVentas;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

@@ -15,21 +15,21 @@ namespace Proyecto_Metodologia
 {
     public partial class FrmLogin : Form
     {
-        protected cEntidad aEntidad;
+     
         public string usuario;
         //------------------------------------------
-
-        public void IniciarEntidad(cEntidad pEntidad)
-        {//Indicar con que entidad trabajará el formulario
-            aEntidad = pEntidad;
-        }
 
 
         public FrmLogin()
         {
             InitializeComponent();
+<<<<<<< HEAD
            
             IniciarEntidad(new cUsuario());
+=======
+            buttonIngresar.Focus();
+           
+>>>>>>> j-branch
         }
 
         public void logins()

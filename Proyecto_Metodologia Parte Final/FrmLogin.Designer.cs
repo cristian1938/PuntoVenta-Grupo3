@@ -70,7 +70,11 @@ namespace Proyecto_Metodologia
             this.buttonIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonIngresar.Font = new System.Drawing.Font("Palatino Linotype", 14.16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIngresar.ForeColor = System.Drawing.Color.Black;
+<<<<<<< HEAD
             this.buttonIngresar.Location = new System.Drawing.Point(411, 245);
+=======
+            this.buttonIngresar.Location = new System.Drawing.Point(299, 247);
+>>>>>>> j-branch
             this.buttonIngresar.Name = "buttonIngresar";
             this.buttonIngresar.Size = new System.Drawing.Size(172, 47);
             this.buttonIngresar.TabIndex = 2;

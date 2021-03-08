@@ -40,6 +40,8 @@
             this.btnarqueo = new FontAwesome.Sharp.IconButton();
             this.btnventas = new FontAwesome.Sharp.IconButton();
             this.panelcontenido = new System.Windows.Forms.Panel();
+            this.btnregistro = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,7 +67,7 @@
             this.txtcategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcategoria.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcategoria.ForeColor = System.Drawing.Color.White;
-            this.txtcategoria.Location = new System.Drawing.Point(681, 36);
+            this.txtcategoria.Location = new System.Drawing.Point(750, 36);
             this.txtcategoria.Name = "txtcategoria";
             this.txtcategoria.Size = new System.Drawing.Size(172, 27);
             this.txtcategoria.TabIndex = 5;
@@ -84,7 +86,7 @@
             this.txtheadtext.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.txtheadtext.IconSize = 25;
             this.txtheadtext.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.txtheadtext.Location = new System.Drawing.Point(641, 7);
+            this.txtheadtext.Location = new System.Drawing.Point(710, 7);
             this.txtheadtext.Name = "txtheadtext";
             this.txtheadtext.Size = new System.Drawing.Size(212, 31);
             this.txtheadtext.TabIndex = 4;
@@ -96,7 +98,7 @@
             this.USUSARIO.AutoSize = true;
             this.USUSARIO.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.USUSARIO.ForeColor = System.Drawing.Color.White;
-            this.USUSARIO.Location = new System.Drawing.Point(732, 15);
+            this.USUSARIO.Location = new System.Drawing.Point(801, 15);
             this.USUSARIO.Name = "USUSARIO";
             this.USUSARIO.Size = new System.Drawing.Size(0, 34);
             this.USUSARIO.TabIndex = 3;
@@ -117,7 +119,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(320, 12);
+            this.label1.Location = new System.Drawing.Point(389, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 37);
             this.label1.TabIndex = 0;
@@ -126,6 +128,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.iconButton1);
+            this.panel2.Controls.Add(this.btnregistro);
             this.panel2.Controls.Add(this.btnusuarios);
             this.panel2.Controls.Add(this.btnarqueo);
             this.panel2.Controls.Add(this.btnventas);
@@ -149,6 +153,7 @@
             this.btnusuarios.IconChar = FontAwesome.Sharp.IconChar.User;
             this.btnusuarios.IconColor = System.Drawing.Color.White;
             this.btnusuarios.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnusuarios.IconSize = 45;
             this.btnusuarios.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnusuarios.Location = new System.Drawing.Point(0, 102);
             this.btnusuarios.Name = "btnusuarios";
@@ -214,6 +219,52 @@
             this.panelcontenido.Size = new System.Drawing.Size(768, 506);
             this.panelcontenido.TabIndex = 2;
             // 
+            // btnregistro
+            // 
+            this.btnregistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnregistro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnregistro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnregistro.FlatAppearance.BorderSize = 0;
+            this.btnregistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnregistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregistro.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregistro.ForeColor = System.Drawing.Color.White;
+            this.btnregistro.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
+            this.btnregistro.IconColor = System.Drawing.Color.White;
+            this.btnregistro.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnregistro.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnregistro.Location = new System.Drawing.Point(0, 153);
+            this.btnregistro.Name = "btnregistro";
+            this.btnregistro.Size = new System.Drawing.Size(183, 73);
+            this.btnregistro.TabIndex = 4;
+            this.btnregistro.Text = "REGISTRO USUARIOS";
+            this.btnregistro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnregistro.UseVisualStyleBackColor = false;
+            this.btnregistro.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.Location = new System.Drawing.Point(0, 433);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(183, 73);
+            this.iconButton1.TabIndex = 5;
+            this.iconButton1.Text = "Cerrar Sesion";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
+            // 
             // FrmSistemaVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,7 +273,7 @@
             this.Controls.Add(this.panelcontenido);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "FrmSistemaVentas";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -247,5 +298,7 @@
         private FontAwesome.Sharp.IconButton txtheadtext;
         private System.Windows.Forms.Panel panelcontenido;
         private System.Windows.Forms.TextBox txtcategoria;
+        private FontAwesome.Sharp.IconButton btnregistro;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

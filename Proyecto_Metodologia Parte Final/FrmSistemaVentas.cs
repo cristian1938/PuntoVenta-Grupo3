@@ -7,8 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Data;
+=======
+>>>>>>> j-branch
 using System.Data.SqlClient;
+using System.Configuration;
 
 
 namespace Proyecto_Metodologia
@@ -39,9 +43,14 @@ namespace Proyecto_Metodologia
 
         public DataSet EjecutarSelect(string pConsulta)
         {//-- Método para ejecutar consultas del tipo SELECT
+<<<<<<< HEAD
 
             using (SqlConnection conexion = new SqlConnection("Data Source=localhost;" +
                "Initial Catalog=BDSISTEMA_VENTAS;Integrated Security=SSPI;"))
+=======
+            string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
+            using (SqlConnection conexion = new SqlConnection(cnn))
+>>>>>>> j-branch
             {
                 conexion.Open();
                 SqlDataAdapter a = new SqlDataAdapter();
@@ -75,12 +84,13 @@ namespace Proyecto_Metodologia
         {
             if (txtcategoria.Text == "Administrador")
             {
-                btnventas.Enabled = false;
+                btnventas.Visible = false;
             }
             if (txtcategoria.Text == "Cajero")
             {
-                btnusuarios.Enabled = false;
-                btnarqueo.Enabled = false;
+                btnusuarios.Visible = false;
+                btnregistro.Visible = false;
+               
             }
         }
         private void AbrirFormularioHijo(Form FrmHijo)
@@ -104,5 +114,24 @@ namespace Proyecto_Metodologia
         {
             AbrirFormularioHijo(new FrmVentas());
         }
+<<<<<<< HEAD
+=======
+
+        private void btnarqueo_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmArqueo());
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmRegistroUsuarios());
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+>>>>>>> j-branch
     }
 }
