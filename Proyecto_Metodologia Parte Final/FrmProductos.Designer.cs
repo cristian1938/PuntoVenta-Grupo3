@@ -35,8 +35,13 @@
             this.txtproductos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+=======
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+>>>>>>> j-branch
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).BeginInit();
@@ -66,6 +71,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.dgvproductos);
             this.panel2.Controls.Add(this.txtproductos);
             this.panel2.Controls.Add(this.label2);
@@ -80,6 +86,10 @@
             // 
             this.dgvproductos.AllowUserToAddRows = false;
             this.dgvproductos.AllowUserToDeleteRows = false;
+<<<<<<< HEAD
+=======
+            this.dgvproductos.BackgroundColor = System.Drawing.Color.White;
+>>>>>>> j-branch
             this.dgvproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproductos.Location = new System.Drawing.Point(31, 91);
             this.dgvproductos.Name = "dgvproductos";
@@ -105,6 +115,7 @@
             this.label2.Text = "NOMBRE PRODUCTO:";
             // 
             // panel3
+<<<<<<< HEAD
             // 
             this.panel3.BackColor = System.Drawing.Color.Maroon;
             this.panel3.Controls.Add(this.button2);
@@ -134,6 +145,52 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+=======
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Maroon;
+            this.panel3.Controls.Add(this.iconButton2);
+            this.panel3.Controls.Add(this.iconButton1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 319);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(554, 73);
+            this.panel3.TabIndex = 0;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.iconButton1.IconColor = System.Drawing.Color.Maroon;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.Location = new System.Drawing.Point(55, 13);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(113, 40);
+            this.iconButton1.TabIndex = 2;
+            this.iconButton1.Text = "Cancelar";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.iconButton2.IconColor = System.Drawing.Color.Maroon;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 30;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton2.Location = new System.Drawing.Point(367, 13);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(113, 40);
+            this.iconButton2.TabIndex = 3;
+            this.iconButton2.Text = "Aceptar";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.button1_Click);
+            // 
+>>>>>>> j-branch
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +199,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmProductos";
+            this.ShowIcon = false;
             this.Text = "FrmProductos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -162,7 +220,7 @@
         private System.Windows.Forms.TextBox txtproductos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }
