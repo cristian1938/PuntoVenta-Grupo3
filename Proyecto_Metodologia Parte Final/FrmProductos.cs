@@ -7,8 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Data;
+=======
+>>>>>>> j-branch
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Proyecto_Metodologia
 {
@@ -98,6 +102,21 @@ namespace Proyecto_Metodologia
                 DatosT = obtenerDatos(pCodigo);
                 Close();
             }
+
+            if (dgvproductos[1, dgvproductos.CurrentCell.RowIndex].Value.ToString()==" ")
+            {
+                string codigo = dgvproductos[0, dgvproductos.CurrentCell.RowIndex].Value.ToString();
+   
+                DatosT = obtenerDatos(codigo);
+                Close();
+            }
+            if (dgvproductos[2, dgvproductos.CurrentCell.RowIndex].Value.ToString() != " ")
+            {
+                string codigo = dgvproductos[0, dgvproductos.CurrentCell.RowIndex].Value.ToString();
+               
+                DatosT = obtenerDatos(codigo);
+                Close();
+            }
             else
             {
                 MessageBox.Show("No ha seleccionado ningún alumno", "ALERTA");
@@ -106,6 +125,11 @@ namespace Proyecto_Metodologia
         public string[] obtenerdatos()
         {
             return DatosT;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
