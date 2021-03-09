@@ -7,8 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Data;
+=======
+>>>>>>> j-branch
 using System.Data.SqlClient;
+using System.Runtime;
+using System.Configuration;
 
 namespace Proyecto_Metodologia
 {
@@ -104,6 +109,7 @@ MessageBox.Show("INGRESA UN PRODUCTO");
         public void actualizarstock(int cantidad, string codproducto)
         {
             string Consulta = "update TAlmacenProductos set Cantidad =" + cantidad + " where CodigoProducto='" + codproducto + "'";
+<<<<<<< HEAD
 
             EjecutarSelect(Consulta);
         }
@@ -234,12 +240,177 @@ MessageBox.Show("INGRESA UN PRODUCTO");
         {
             string Consulta = "insert into TVentas values" +
              "('" + txtCodVentas.Text + "'," + txttotal.Text + ",'" + fechaventa.Value.ToShortDateString() + "')";
+=======
+>>>>>>> j-branch
 
             EjecutarSelect(Consulta);
             limpiarventa();
             dgvVentas.Rows.Clear();
             autoincrementable();
             clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                int indice = dgvVentas.CurrentCell.RowIndex;
+
+                txtnombre.Text = dgvVentas[2, indice].Value.ToString();
+                int cantidad = int.Parse(dgvVentas[2, indice].Value.ToString());
+                ////int  cantidad =(int) dgvVentas[2,indice].Value;
+                string codprodcuto = dgvVentas[0, indice].Value.ToString();
+                int rcantidad = int.Parse(buscarstock(codprodcuto));
+                int actualizar = cantidad + rcantidad;
+                actualizarstock(actualizar, codprodcuto);
+                dgvVentas.Rows.RemoveAt(indice);
+                calculartotal();
+                clear();
+            }
+            catch
+            {
+                MessageBox.Show("LA LISTA DE VENTAS ESTA VACIA AGREGE PRODCUTOS");
+            }
+        }
+        public string buscarstock(string pCodigoProducto)
+        {
+            string stock;
+            string Consulta = "select Cantidad from TAlmacenProductos where CodigoProducto='" + pCodigoProducto + "'";
+
+            EjecutarSelect(Consulta);
+            stock = ValorAtributo("Cantidad");
+            return stock;
+        }
+        public string ultimoValorAtributo()
+        {//-- Recupera el valor de un atributo del dataset
+            string A;
+
+            string Consulta = "select MAX(CodVenta) AS  ULTIMO  from TVentas";
+            EjecutarSelect(Consulta);
+            A = ValorAtributo("ULTIMO");
+            if (A == "")
+            {
+                A = "E0000";
+            }
+
+            return A;
+        }
+        public void autoincrementable()
+        {
+            String A;
+            //E0001
+            A = ultimoValorAtributo();
+
+            string b = A.Substring(0, 5);
+            double d = double.Parse(A.Substring(2, 4));
+            d = d + 1;
+            if (d < 10)
+            {
+                b = A.Substring(0, 5);
+                txtCodVentas.Text = b + d.ToString();
+                txtCodVentas.Enabled = false;
+
+            }
+            if (d > 9)
+            {
+                b = A.Substring(0, 4);
+                txtCodVentas.Text = b + d.ToString();
+                txtCodVentas.Enabled = false;
+            }
+            if (d > 99)
+            {
+                b = A.Substring(0, 3);
+                txtCodVentas.Text = b + d.ToString();
+                txtCodVentas.Enabled = false;
+            }
+        }
+
+        public void calculartotal()
+        {
+            double cantidad = 0;
+            double subtotal = 0;
+            double igv = 0;
+            double ventatotal = 0;
+            int i = 0;
+            while (i < dgvVentas.RowCount)
+            {
+                cantidad = double.Parse(dgvVentas[3, i].Value.ToString());
+                subtotal = subtotal + cantidad;
+                i++;
+            }
+            igv = subtotal * (double)0.18;
+            ventatotal = subtotal + igv;
+
+            
+            txtsubtotal.Text = Math.Round(subtotal, 2).ToString();
+            txtigv.Text = Math.Round(igv, 2).ToString();
+            txttotal.Text = Math.Round(ventatotal, 2).ToString();
+            if (dgvVentas.Rows.Count == 0)
+            {
+                txtsubtotal.Text = "0.00";
+                txtigv.Text = "0.00";
+                txttotal.Text = "0.00";
+            }
+        }
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Consulta = "insert into TVentas values" +
+             "('" + txtCodVentas.Text + "'," + txttotal.Text + ",'" +
+             fechaventa.Value.Year+"/"+fechaventa.Value.Month+"/"+fechaventa.Value.Day +
+             "','VENDIDO')";
+
+            EjecutarSelect(Consulta);
+            limpiarventa();
+            dgvVentas.Rows.Clear();
+            autoincrementable();
+            clear();
+        }
+
+        private void txtcodp_TextChanged(object sender, EventArgs e)
+        {
+            if (txtcodp.Text == "")
+            {
+                clear();
+            }
+
+                if (txtcodp.Text.Length == 4)
+            {
+               string[] relleno= obtenerDatos(txtcodp.Text);
+                txtcodp.Text = relleno[0];
+                txtnombre.Text = relleno[1];
+                txtpreciou.Text = relleno[2];
+                txtStock.Text = relleno[3];
+                        
+            }
+
+            
+        }
+        public string[] obtenerDatos(string pCodigo)
+        {
+            string[] datos = new string[5];
+            string Consulta = "select * from TAlmacenProductos where CodigoProducto= '" + pCodigo + "'";
+            EjecutarSelect(Consulta);
+            datos[0] = ValorAtributo("CodigoProducto");
+            datos[1] = ValorAtributo("Descripcion");
+            datos[2] = ValorAtributo("PrecioUnitario");
+            datos[3] = ValorAtributo("Cantidad");
+
+
+           
+            return datos;
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            FrmRegistrodeVentas re = new FrmRegistrodeVentas();
+            re.ShowDialog();
         }
     }
 }
