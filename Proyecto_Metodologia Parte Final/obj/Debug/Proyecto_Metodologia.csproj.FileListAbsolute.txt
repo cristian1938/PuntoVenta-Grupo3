@@ -1,0 +1,107 @@
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\bin\Debug\Proyecto_Metodologia.exe.config
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\bin\Debug\Proyecto_Metodologia.exe
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\bin\Debug\Proyecto_Metodologia.pdb
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csprojAssemblyReference.cache
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.Form1.resources
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.Properties.Resources.resources
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csproj.GenerateResource.cache
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csproj.CoreCompileInputs.cache
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.exe
+D:\archivos de aprendizaje\UNIVERSIDAD\2020-ll\Metodologia y Desarrollo de Software\Tercera Unidad\Proyecto\Login\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.pdb
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.exe
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.pdb
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\bin\Debug\Proyecto_Metodologia.exe.config
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\bin\Debug\Proyecto_Metodologia.exe
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\bin\Debug\Proyecto_Metodologia.pdb
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmRegistro.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmSistemaVentas.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmVentas.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmProductos.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csprojAssemblyReference.cache
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.Form1.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmArqueo.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmConteo.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmProductos.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmRegistro.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmSistemaVentas.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmVentas.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.Properties.Resources.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csproj.GenerateResource.cache
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csproj.CoreCompileInputs.cache
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.exe
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.pdb
+C:\Users\jhno\Desktop\Proyecto_Metodologia\bin\Debug\Proyecto_Metodologia.exe.config
+C:\Users\jhno\Desktop\Proyecto_Metodologia\bin\Debug\Proyecto_Metodologia.exe
+C:\Users\jhno\Desktop\Proyecto_Metodologia\bin\Debug\Proyecto_Metodologia.pdb
+C:\Users\jhno\Desktop\Proyecto_Metodologia\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\jhno\Desktop\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmLogin.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmArqueo.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmConteo.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia\obj\Debug\Proyecto_Metodologia.FrmOlvidasteContraseña.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.FrmLogin.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.FrmArqueo.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.FrmConteo.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.FrmOlvidasteContraseña.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.FrmProductos.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.FrmRegistro.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.FrmSistemaVentas.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.FrmVentas.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.exe
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.pdb
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\bin\Debug\Proyecto_Metodologia.exe.config
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\bin\Debug\Proyecto_Metodologia.exe
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\bin\Debug\Proyecto_Metodologia.pdb
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final\obj\Debug\Proyecto_Metodologia.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\bin\Debug\Proyecto_Metodologia.exe.config
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\bin\Debug\Proyecto_Metodologia.exe
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\bin\Debug\Proyecto_Metodologia.pdb
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmLogin.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmArqueo.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmConteo.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmOlvidasteContraseña.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmProductos.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmRegistro.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmSistemaVentas.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmVentas.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.exe
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.pdb
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmRegistrodeVentas.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmRegistroArqueo.resources
+C:\Users\Usuario\Desktop\Metodologia desarrollo de software\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmRegistroUsuarios.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\bin\Debug\Proyecto_Metodologia.exe.config
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\bin\Debug\Proyecto_Metodologia.exe
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\bin\Debug\Proyecto_Metodologia.pdb
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.csprojAssemblyReference.cache
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmLogin.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmArqueo.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmConteo.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmOlvidasteContraseña.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmProductos.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmRegistro.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmRegistroArqueo.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmRegistrodeVentas.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmRegistroUsuarios.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmSistemaVentas.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.FrmVentas.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.Properties.Resources.resources
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.csproj.GenerateResource.cache
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.csproj.CoreCompileInputs.cache
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.csproj.CopyComplete
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.exe
+C:\Users\jhno\Desktop\Proyecto_Metodologia Parte Final 2\obj\Debug\Proyecto_Metodologia.pdb
